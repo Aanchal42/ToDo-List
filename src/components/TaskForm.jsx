@@ -5,6 +5,7 @@ function TaskForm({ setTasks }) {
   const [priority, setPriority] = useState('Medium');
   const [dueDate, setDueDate] = useState('');
 
+   // Add task
   const handleAdd = () => {
     if (!name.trim()) return;
     const newTask = {
