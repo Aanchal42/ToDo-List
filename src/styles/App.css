@@ -1,0 +1,169 @@
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #333;
+  --bg-dark: #1e1e1e;
+  --text-dark: #f9f9f9;
+  --primary: #4f46e5;
+  --danger: #e11d48;
+  --success: #10b981;
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-container {
+  min-height: 100vh;    
+  width: 100vw;          
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-light); 
+  transition: background 0.3s, color 0.3s;
+}
+
+
+.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
+}
+.task-name-input {
+  flex: 2; 
+  padding: 0.6rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.form-row select,
+.form-row input[type="date"] {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.form-row button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #4338ca;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.task-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-edit-mode {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.task-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 2;
+  color: black;
+}
+
+.priority {
+  font-size: 0.95rem;
+  color: #555;
+  flex: 1;
+}
+
+.due-date {
+  font-size: 0.9rem;
+  color: #888;
+  flex: 1;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #4338ca;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.priority.high {
+  color: var(--danger);
+}
+
+.priority.medium {
+  color: orange;
+}
+
+.priority.low {
+  color: var(--success);
+}
+
+.theme-toggle {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.no-task-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
