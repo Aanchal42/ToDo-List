@@ -13,11 +13,11 @@ function App() {
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(stored);
-  }, []);
+   }, []);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
+   }, [tasks]);
 
    const filteredTasks = tasks.filter(task =>
     task.name.toLowerCase().includes(searchTerm.toLowerCase())
